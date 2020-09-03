@@ -1,0 +1,13 @@
+$page-max-width: 962px;
+$padding-offset: 20px;
+
+$default-icon-font-size: 32px;
+$title-font-size: 18px;
+
+$breakpoints: (
+    desktop: (start: 962px, end: null),
+    tablet: (start: 600px, end: 961px),
+    mobile: (start: 450px, end: 599px),
+    small-mobile: (start: null, end: 449px)    
+);
+

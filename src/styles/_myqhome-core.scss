@@ -1,0 +1,16 @@
+﻿.center {
+  margin: auto;
+  width: 50%;
+}
+
+//Margins
+@include setup-scale("margin-top", "m-t-", 0, 5, 80, px);
+@include setup-scale("margin-bottom", "m-b-", 0, 5, 80, px);
+@include setup-scale("margin-left", "m-l-", 0, 5, 80, px);
+@include setup-scale("margin-right", "m-r-", 0, 5, 80, px);
+
+// Padding
+@include setup-scale("padding-top", "p-t-", 0, 5, 80, px);
+@include setup-scale("padding-bottom", "p-b-", 0, 5, 80, px);
+@include setup-scale("padding-left", "p-l-", 0, 5, 80, px);
+@include setup-scale("padding-right", "p-r-", 0, 5, 80, px);

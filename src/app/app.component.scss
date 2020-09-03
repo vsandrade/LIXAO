@@ -1,0 +1,208 @@
+@import "exports";
+
+.offerBanner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  &_open-close-container {
+    color: #000000;
+    background-color: #f6f7f9;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .bannerContainer {
+      margin-top: 10px;
+
+      @include media(small-mobile, mobile) {
+        padding: 0px 16px;
+      }
+
+      .box1 {
+        width: 100px;
+        height: 100px;
+        margin-right: 24px;
+        float: left;
+
+        @media screen and (max-width: 1024px) {
+          margin-right: 10px;
+        }
+
+        @media screen and (max-width: 720px) {
+          display: none;
+        }
+
+        @include media(small-mobile, mobile) {
+          display: none;
+        }
+      }
+
+      .box2 {
+        max-width: 576px;
+        float: left;
+        height: 100px;
+        margin-right: 195px;
+        //padding: 18px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: 1024px) {
+          margin-right: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+          max-width: 445px;
+          padding: 10px 0px;
+        }
+
+        @include media(small-mobile, mobile) {
+          margin-right: 0px;
+          height: auto;
+          padding: 0px;
+          max-width: 445px;
+          float: none;
+        }
+
+        h1 {
+          font-family: 'Roboto Slab';
+          font-size: 23px;
+          color: #394352;
+          text-decoration: none solid rgb(57, 67, 82);
+          margin: 4px 0px;
+
+          label { color: #3da542; }
+
+          @include media(small-mobile, mobile, tablet) {
+            font-size: 20px;
+            max-width: 440px;
+            margin-right: 0px;
+          }
+        }
+
+        span {
+          max-width: 570px;
+          font-family: $open-sans;
+          font-size: 16px;
+          color: #394352;
+          text-decoration: none solid rgb(57, 67, 82);
+          line-height: 24px;
+          font-weight: 400;
+
+          @include media(small-mobile, mobile, tablet) {
+            font-size: 14px;
+            max-width: 560px;
+          }
+        }
+      }
+
+      .box3 {
+        display: flex;
+        align-items: center;
+        float: left;
+        height: 95px;
+
+        @include media(small-mobile, mobile) {
+          width: 100%;
+          height: 40px;
+          margin: 16px 0px;
+        }
+
+        .btnBanner {
+          width: 141px;
+          height: 40px;
+          border-radius: 3px;
+          border: 0px;
+          background-color: #3da542;
+          background-size: cover;
+          font-family: $open-sans;
+          border: 0px;
+          font-weight: 700;
+          font-size: 14px;
+          color: #ffffff;
+          text-decoration: none solid rgb(255, 255, 255);
+          text-transform: uppercase;
+          text-align: center;
+          /* Custom CSS */
+          text-transform: uppercase;
+          cursor: pointer;
+
+
+        }
+      }
+
+    }
+  }
+
+  &_footerLabel {
+    width: 1024px;
+    height: 16px;
+    margin: 16px 0px;
+    font-family: Open Sans;
+    font-size: 10px;
+    font-weight: 300;
+    color: #93a0b3;
+    line-height: 16px;
+    text-align: right;
+    text-decoration: none solid rgb(147, 160, 179);
+
+    @media screen and (max-width: 1024px) {
+      width: 845px;
+    }
+
+    @include media(tablet) {
+      width: 710px;
+    }
+
+    @media screen and (max-width: 720px) {
+      width: 580px;
+    }
+
+    @include media(small-mobile, mobile) {
+      width: 100%;
+      text-align: left;
+      padding: 16px;
+      margin: 0px 0px 16px 0px;
+    }
+  }
+
+  &_toggleBar {
+    width: 100%;
+    height: 40px;
+    margin: 0px;
+    border-bottom: 2px solid #ced6e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7f9;
+    cursor: pointer;
+
+    span {
+      margin: 10px 0px 6px;
+      width: 31px;
+      height: 14px;
+      font-family: Open Sans;
+      font-size: 14px;
+      color: #394352;
+      text-decoration: none solid rgb(57, 67, 82);
+      line-height: 14px;
+      text-align: right;
+    }
+
+    .up {
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      margin: 8px 18px 5px;
+    }
+
+    .down {
+      transform: rotate(90deg);
+      -webkit-transform: rotate(45deg);
+      margin: 4px 12px 0px;
+    }
+  }
+}

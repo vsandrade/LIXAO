@@ -1,0 +1,98 @@
+﻿@import "myqhome-variables";
+@import "myqhome-colors";
+@import "myqhome-font";
+@import "myqhome-mixins";
+
+$font-name-iq-font: "iq-font";
+$font-iq-url: '/clients/resources/fonts/iq-font/iq_font';
+@font-face {
+    font-family: $font-name-iq-font;
+    src: url($font-iq-url + '.eot'); /* IE9 Compat Modes */
+    src: url($font-iq-url + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url($font-iq-url + '.woff') format('woff'), /* Pretty Modern Browsers */
+         url($font-iq-url + '.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-------------------------------------------------------------------------
+	IQ-FONT
+-------------------------------------------------------------------------*/
+.iq {
+	font-family: $font-name-iq-font; //'myQT';
+    font-size: $default-icon-font-size;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+
+    transform: translate(0, 0);
+    display: inline-block;
+    text-rendering: auto;
+}
+
+.iq-chevron-sm-left {
+    &:before {
+        content: "\EA";
+    }
+}
+
+.iq-chevron-md-left {
+    &:before {
+        content: "\D6";
+    }
+}
+
+.iq-chevron-im-left {
+    &:before {
+        content: "\37";
+    }
+}
+
+.iq-chevron-lg-left {
+    &:before {
+        content: "\DB";
+    }
+}
+
+.iq-chevron-sm-right {
+    &:before {
+        content: "\EB";
+    }
+}
+
+.iq-chevron-md-right {
+    &:before {
+        content: "\D8";
+    }
+}
+
+.iq-chevron-im-right {
+    &:before {
+        content: "\38";
+    }
+}
+
+.iq-chevron-lg-right {
+    &:before {
+        content: "\DC";
+    }
+}
+
+.iq-download {
+    &:before {
+        content: "\77";
+    }
+}
+
+.iq-added-large {
+    &:before {
+        content: "\63";
+    }
+}

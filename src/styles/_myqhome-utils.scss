@@ -1,0 +1,59 @@
+@import 'myqhome-colors';
+
+.bordes-styles {
+    &.solid {
+        border-bottom-style: solid;
+    }   
+}
+
+.borders-width {
+    .b-b-1 {
+        border-bottom-width: 1px;
+    }
+
+    .b-b-2 {
+        border-bottom-width: 2px;
+    }
+
+    .b-b-3 {
+        border-bottom-width: 3px;
+    }
+}
+
+.borders-colors {
+    &.dark-gray {
+        border-color: $dark-gray;
+    }
+
+    &.gray {
+        border-color: $gray;
+    }
+
+    &.medium-gray {
+        border-color: $medium-gray;
+    }
+
+    &.light-gray {
+        border-color: $light-gray;
+    }
+
+    &.ultra-light-gray {
+        border-color: $ultra-light-gray;
+    }
+}
+
+.border {
+    @extend .borders-colors;
+    @extend .borders-width;
+    @extend .bordes-styles;
+}
+
+.fi-cancel-lg {
+    color: #69788C;
+}
+
+.mat-dialog-container {
+    box-shadow: none;
+}
+
+

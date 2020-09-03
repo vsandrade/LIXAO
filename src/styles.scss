@@ -1,1 +1,13 @@
+@import "styles/reset";
+
+/* Material Angular Theme */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "styles/myqhome-variables";
+@import "styles/myqhome-mixins";
+
 /* You can add global styles to this file, and also import other style files */
+body, html {
+  margin: 0px;
+  padding: 0px;
+}

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  footerBannerConfig: {
+      status: 'preLaunching', // preLaunching | launched | inactive
+      preLaunchingUrl: 'https://www.surveymonkey.com/r/LQJLFMY?Id=12345',
+      launchedUrl: 'http://www.questrade.com/questmortgage'
+  }
 };
 
 /*

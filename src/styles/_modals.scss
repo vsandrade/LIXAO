@@ -1,0 +1,94 @@
+﻿@import "exports";
+
+$max-desktop-page-size: 540px;
+.oaa-modal-container {
+  font-family: $open-sans !important;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height: 100%;
+  align-items: center;
+  padding: 20px 24px;
+  width: 100%;
+
+  &__header {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    .title {      
+      width: 100%;
+      @include media(desktop) {
+        width: $max-desktop-page-size;
+      }
+
+      .header-title {
+        margin-top: 25px;
+        color: $color-primary;
+        font-style: normal;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 0;
+       
+        @include media(small-mobile, mobile) {
+            font-size: 16px;
+            margin-top: 0;
+        }
+      }
+
+      .text-question {
+        font-weight: $font-weight-semibold;
+        font-style: normal;
+        font-size: 12px;
+        @include media(mobile, small-mobile) {
+          display: none;
+        }
+      }
+
+      .color-blue-question {
+        cursor: pointer;
+        display: inline;
+        margin-left: 15px;
+        text-align: left;
+        @include media(desktop) {
+          display: inline-block;
+          text-align: right;
+          float: right;
+          line-height: 26px;
+        }
+      }
+    }
+    .close-button {
+      margin-left: auto;
+      span {
+        color: $slate-gray;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1 1 auto;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    max-height: calc(100vh - 205px);
+    @include media(tablet, mobile, small-mobile) {
+      max-height: calc(100vh - 165px);
+    }
+
+    @include media(desktop) {
+      width: $max-desktop-page-size;
+    }   
+  }
+  &__footer {
+    height: 60px;
+    width: 100%;
+    @include media(mobile, small-mobile) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+form {
+  position: relative;
+  .error-bar-hidden {
+    display: none;
+  }
+  &.ng-invalid {
+    .errors-bar-container {
+      position: fixed;
+      z-index: 100;
+      width: calc(100% - 75px);
+      @include media(desktop) {
+        width: 531px;
+      }
+      background: $valencia;
+      @include border-radius(3px);
+      padding: 0px 20px;
+      margin-bottom: 12px;
+      .errors-bar {
+        line-height: 1;
+        box-sizing: border-box;
+        padding: 7px 0px;
+        margin: 0 auto;
+        font-family: $open-sans;
+        font-size: 14px;
+        font-weight: $font-weight-semibold;
+        color: white;
+      }
+    }
+    .validation-error {
+      font-family: $open-sans;
+      color: $valencia;
+      line-height: 12px;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: $font-weight-semibold;
+    }
+  }
+  .optionSet {
+    label {
+      display: flex;
+      flex-flow: row nowrap;
+      flex: 1 1 auto;
+      >input {
+        width: 5%;
+        margin-top: 2px;
+        @include media(small-mobile) {
+          width: 15%;
+        }
+      }
+      >div {
+        width: 100%;
+      }
+    }
+  }
+  .radio {
+    @extend .optionSet;
+  }
+  .checkbox {
+    @extend .optionSet;
+    label {
+      >span {
+        width: 100%;
+      }
+    }
+  }
+}

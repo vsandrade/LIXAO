@@ -1,0 +1,1748 @@
+$myQt-font-icon-name: "myQT";
+$font-myqt-url: '../assets/fonts/font-icon/' + $myQt-font-icon-name;
+
+@font-face {
+    font-family: $myQt-font-icon-name;
+    src: url($font-myqt-url + '.eot'); /* IE9 Compat Modes */
+    src: url($font-myqt-url + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url($font-myqt-url + '.woff') format('woff'), /* Pretty Modern Browsers */
+         url($font-myqt-url + '.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+%myQT-font-family {
+    font-family: $myQt-font-icon-name;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: middle;
+    display: inline-block;
+    text-rendering: auto;
+    font-size: $default-icon-font-size;
+}
+
+.fi {
+    @extend %myQT-font-family;
+}
+
+.fi-go-to-button::before {
+    content: "\003B"; // ~
+
+  }
+
+  .fi-drawer-horizontal::before {
+    content: "\003A"; // ;
+
+  }
+
+  .fi-drawer-vertical::before {
+    content: "\0034"; // :
+
+  }
+
+  .fi-email::before {
+    content: "\0040"; // @
+
+  }
+
+  .fi-time-zone::before {
+    content: "\006A"; // j
+
+  }
+
+  .fi-link::before {
+    content: "\006B"; // k
+
+  }
+
+  .fi-fast-sm-risk::before {
+    content: "\0069"; // i
+
+  }
+
+  .fi-funding-method::before {
+    content: "\006E"; // n
+
+  }
+
+  .fi-select-portfolio::before {
+    content: "\006C"; // l
+
+  }
+
+  .fi-mail::before {
+    content: "\006D"; // m
+
+  }
+
+  .fi-download-document::before {
+    content: "\006F"; // o
+
+  }
+
+  .fi-view-details::before {
+    content: "\0074"; // t
+
+  }
+
+  .fi-begin::before {
+    content: "\0075"; // u
+
+  }
+
+  .fi-question::before {
+    content: "\0026"; // &
+
+  }
+
+  .fi-suspend::before {
+    content: "\0072"; // r
+
+  }
+
+  .fi-print::before {
+    content: "\00A5"; // ¥
+
+  }
+
+  .fi-lock::before {
+    content: "\00BC"; // ¼
+
+  }
+
+  .fi-hide::before {
+    content: "\0071"; // p
+
+  }
+
+  .fi-show::before {
+    content: "\0072"; // q
+
+  }
+
+  .fi-trash-bin::before {
+    content: "\010B"; // ċ
+
+  }
+
+  .fi-comments::before {
+    content: "\0134"; // Ĵ
+
+  }
+
+  .fi-pdf-download-sm::before {
+    content: "\005F"; // _
+
+  }
+
+  .fi-pdf-download-lg::before {
+    content: "\005E"; // ^
+
+  }
+
+  .fi-excel-download-sm::before {
+    content: "\003D"; // =
+
+  }
+
+  .fi-export-pdf::before {
+    content: "\00F0"; // ð
+
+  }
+
+  .fi-export-csv::before {
+    content: "\00F1"; // ñ
+
+  }
+
+  .fi-export-xls::before {
+    content: "\00BE"; // ¾
+
+  }
+
+  .fi-grid-view-sm::before {
+    content: "\0061"; // a
+
+  }
+
+  .fi-grid-view-lg::before {
+    content: "\0062"; // b
+
+  }
+
+  .fi-menu::before {
+    content: "\004B"; // K
+
+  }
+
+  .fi-graph-view::before {
+    content: "\0064"; // d
+
+  }
+
+  .fi-change---edit::before {
+    content: "\0065"; // e
+
+  }
+
+  .fi-esign::before {
+    content: "\0066"; // f
+
+  }
+
+  .fi-logout-sm::before {
+    content: "\00D0"; // Ð
+
+  }
+
+  .fi-logout-lg::before {
+    content: "\004C"; // L
+
+  }
+
+  .fi-cancel::before {
+    content: "\002A"; // *
+
+  }
+
+  .fi-bookmark-hover-sm::before {
+    content: "\0073"; // s
+
+  }
+
+  .fi-bookmark-sm::before {
+    content: "\0053"; // S
+
+  }
+
+  .fi-bookmark-hover-lg::before {
+    content: "\010C"; // Č
+
+  }
+
+  .fi-bookmark-lg::before {
+    content: "\010D"; // č
+
+  }
+
+  .fi-id-1::before {
+    content: "\00D7"; // ×
+
+  }
+
+  .fi-id-2::before {
+    content: "\0060"; // `
+
+  }
+
+  .fi-id-3::before {
+    content: "\00B0"; // °
+
+  }
+
+  .fi-profile-sm::before {
+    content: "\0067"; // g
+
+  }
+
+  .fi-profile-lg::before {
+    content: "\0047"; // G
+
+  }
+
+  .fi-home-sm::before {
+    content: "\0068"; // h
+
+  }
+
+  .fi-home-lg::before {
+    content: "\0041"; // A
+
+  }
+
+  .fi-my-portfolio::before {
+    content: "\0042"; // B
+
+  }
+
+  .fi-my-accounts::before {
+    content: "\0043"; // C
+
+  }
+
+  .fi-my-requests::before {
+    content: "\0044"; // D
+
+  }
+
+  .fi-my-platforms::before {
+    content: "\0045"; // E
+
+  }
+
+  .fi-my-resources::before {
+    content: "\0046"; // F
+
+  }
+
+  .fi-search::before {
+    content: "\0048"; // H
+
+  }
+
+  .fi-notification::before {
+    content: "\0049"; // I
+
+  }
+
+  .fi-chat::before {
+    content: "\004A"; // J
+
+  }
+
+  .fi-watchlist::before {
+    content: "\004D"; // M
+
+  }
+
+  .fi-settings-lg::before {
+    content: "\004E"; // N
+
+  }
+
+  .fi-account::before {
+    content: "\004F"; // O
+
+  }
+
+  .fi-research::before {
+    content: "\0050"; // P
+
+  }
+
+  .fi-bring-all-to-front::before {
+    content: "\0051"; // Q
+
+  }
+
+  .fi-calendar::before {
+    content: "\0063"; // c
+
+  }
+
+  .fi-activate::before {
+    content: "\00AF"; // ¯
+
+  }
+
+  .fi-password::before {
+    content: "\00BD"; // ½
+
+  }
+
+  .fi-puzzle::before {
+    content: "\0138"; // ĸ
+
+  }
+
+  .fi-wifi-sm::before {
+    content: "\012C"; // Ĭ
+
+  }
+
+  .fi-wifi-md::before {
+    content: "\010E"; // Ď
+
+  }
+
+  .fi-wifi-lg::before {
+    content: "\011B"; // ě
+
+  }
+
+  .fi-fast-sm-risk::before {
+    content: "\0069"; // i
+
+  }
+
+  .fi-fast-md::before {
+    content: "\010F"; // ď
+
+  }
+
+  .fi-fast-lg::before {
+    content: "\011C"; // Ĝ
+
+  }
+
+  .fi-usa-sm::before {
+    content: "\012E"; // Į
+
+  }
+
+  .fi-usa-md::before {
+    content: "\0115"; // ĕ
+
+  }
+
+  .fi-usa-lg::before {
+    content: "\011D"; // ĝ
+
+  }
+
+  .fi-canada-sm::before {
+    content: "\012F"; // į
+
+  }
+
+  .fi-canada-md::before {
+    content: "\0116"; // Ė
+
+  }
+
+  .fi-canada-lg::before {
+    content: "\011E"; // Ğ
+
+  }
+
+  .fi-free-sm::before {
+    content: "\0130"; // İ
+
+  }
+
+  .fi-free-md::before {
+    content: "\0117"; // ė
+
+  }
+
+  .fi-free-lg::before {
+    content: "\011F"; // ğ
+
+  }
+
+  .fi-questrade-sm::before {
+    content: "\0131"; // ı
+
+  }
+
+  .fi-questrade-md::before {
+    content: "\0118"; // Ę
+
+  }
+
+  .fi-questrade-lg::before {
+    content: "\0120"; // Ġ
+
+  }
+
+  .fi-international-sm::before {
+    content: "\0132"; // Ĳ
+
+  }
+
+  .fi-international-md::before {
+    content: "\0119"; // ę
+
+  }
+
+  .fi-international-lg::before {
+    content: "\0121"; // ġ
+
+  }
+
+  .fi-recurring-sm::before {
+    content: "\0133"; // ĳ
+
+  }
+
+  .fi-recurring-md::before {
+    content: "\011A"; // Ě
+
+  }
+
+  .fi-recurring-lg::before {
+    content: "\0122"; // Ģ
+
+  }
+
+  .fi-mail-sm::before {
+    content: "\0114"; // Ĕ
+
+  }
+
+  .fi-mail-lg::before {
+    content: "\013A"; // ĺ
+
+  }
+
+  .fi-feedback-sm::before {
+    content: "\014A"; // Ŋ
+
+  }
+
+  .fi-feedback-md::before {
+    content: "\0140"; // ŀ
+
+  }
+
+  .fi-live-chat-sm::before {
+    content: "\0149"; // ŉ
+
+  }
+
+  .fi-live-chat-lg::before {
+    content: "\0141"; // Ł
+
+  }
+
+  .fi-tool-tip-sm::before {
+    content: "\014B"; // ŋ
+
+  }
+
+  .fi-tool-tip-im::before {
+    content: "\0142"; // ł
+
+  }
+
+  .fi-call-sm::before {
+    content: "\014C"; // Ō
+
+  }
+
+  .fi-call-lg::before {
+    content: "\0143"; // Ń
+
+  }
+
+  .fi-export-excel::before {
+    content: "\0165"; // ť
+
+  }
+
+  .fi-portfolio-management-padding-fix::before {
+    content: "\0166"; // Ŧ
+
+  }
+
+  .fi-alerts::before {
+    content: "\016B"; // ū
+
+  }
+
+  .fi-online-chat::before {
+    content: "\016C"; // Ŭ
+
+  }
+
+  .fi-mobile-trading-login::before {
+    content: "\016E"; // ŭ
+
+  }
+
+  .fi-mobile-trading-passwords::before {
+    content: "\016D"; // Ů
+
+  }
+
+  .fi-chevron-down::before {
+    content: "\0173"; // ų
+
+  }
+
+  .fi-chevron-up::before {
+    content: "\0174"; // Ŵ
+
+  }
+
+  .fi-chevron-left::before {
+    content: "\0175"; // ŵ
+
+  }
+
+  .fi-chevron-right::before {
+    content: "\0176"; // Ŷ
+
+  }
+
+  .fi-checkmark::before {
+    content: "\0177"; // ŷ
+
+  }
+
+  .fi-profile-icon::before {
+    content: "\0178"; // Ÿ
+
+  }
+
+  .fi-employment-icon::before {
+    content: "\0179"; // Ź
+
+  }
+
+  .fi-financial-icon::before {
+    content: "\017A"; // ź
+
+  }
+
+  .fi-citizenship-icon::before {
+    content: "\017B"; // Ż
+
+  }
+
+  .fi-plus::before {
+    content: "\0171"; // ű
+  }
+
+  .fi-minus::before {
+    content: "\0172"; // Ų
+  }
+
+  .fi-withdrawals::before {
+    content: "\00C0"; // À
+
+  }
+
+  .fi-trades::before {
+    content: "\00C1"; // Á
+
+  }
+
+  .fi-interest::before {
+    content: "\00C2"; // Â
+
+  }
+
+  .fi-fees-and-rebates::before {
+    content: "\00C3"; // Ã
+
+  }
+
+  .fi-fx-conversations::before {
+    content: "\00C4"; // Ä
+
+  }
+
+  .fi-deposits::before {
+    content: "\00C5"; // Å
+
+  }
+
+  .fi-stocks::before {
+    content: "\00C6"; // Æ
+
+  }
+
+  .fi-other::before {
+    content: "\00C7"; // Ç
+
+  }
+
+  .fi-corporate-action::before {
+    content: "\00C8"; // È
+
+  }
+
+  .fi-dividends::before {
+    content: "\00C9"; // É
+
+  }
+
+  .fi-options::before {
+    content: "\00CA"; // Ê
+
+  }
+
+  .fi-fees-and-rebates::before {
+    content: "\00CB"; // Ë
+
+  }
+
+  .fi-trasfers::before {
+    content: "\00CC"; // Ì
+
+  }
+
+  .fi-dividend-reinvestment::before {
+    content: "\00CD"; // Í
+
+  }
+
+  .fi-cash::before {
+    content: "\00CE"; // Î
+
+  }
+
+  .fi-debt-instruments::before {
+    content: "\00CF"; // Ï
+
+  }
+
+  .fi-canadian-equity::before {
+    content: "\00B1"; // ±
+
+  }
+
+  .fi-us.-equity::before {
+    content: "\00B2"; // ²
+
+  }
+
+  .fi-international-equity::before {
+    content: "\00B3"; // ³
+
+  }
+
+  .fi-cash::before {
+    content: "\00B4"; // ´
+
+  }
+
+  .fi-fixed-income::before {
+    content: "\00B5"; // µ
+
+  }
+
+  .fi-mutual-funds::before {
+    content: "\0102"; // Ă
+
+  }
+
+  .fi-american-depository-reciepts::before {
+    content: "\0100"; // Ā
+
+  }
+
+  .fi-precious-metals::before {
+    content: "\0104"; // Ą
+
+  }
+
+  .fi-warrants-and-rights::before {
+    content: "\0106"; // Ć
+
+  }
+
+  .fi-etfs::before {
+    content: "\0108"; // Ĉ
+
+  }
+
+  .fi-withdrawals-sm::before {
+    content: "\00E0"; // à
+
+  }
+
+  .fi-trades-sm::before {
+    content: "\00E1"; // á
+
+  }
+
+  .fi-interest-sm::before {
+    content: "\00E2"; // â
+
+  }
+
+  .fi-fees-and-rebates-sm::before {
+    content: "\00E3"; // ã
+
+  }
+
+  .fi-fx-conversations-sm::before {
+    content: "\00E4"; // ä
+
+  }
+
+  .fi-deposits-sm::before {
+    content: "\00E5"; // å
+
+  }
+
+  .fi-stocks-sm::before {
+    content: "\00E6"; // æ
+
+  }
+
+  .fi-other-sm::before {
+    content: "\00E7"; // ç
+
+  }
+
+  .fi-corporate-action-sm::before {
+    content: "\00E8"; // è
+
+  }
+
+  .fi-dividends-sm::before {
+    content: "\00E9"; // é
+
+  }
+
+  .fi-options-sm::before {
+    content: "\00EA"; // ê
+
+  }
+
+  .fi-fees-and-rebates-sm::before {
+    content: "\00EB"; // ë
+
+  }
+
+  .fi-trasfers-sm::before {
+    content: "\00EC"; // ì
+
+  }
+
+  .fi-dividend-reinvestment-sm::before {
+    content: "\00ED"; // í
+
+  }
+
+  .fi-cash-sm::before {
+    content: "\00EE"; // î
+
+  }
+
+  .fi-debt-instruments-sm::before {
+    content: "\00EF"; // ï
+
+  }
+
+  .fi-canadian-equity-sm::before {
+    content: "\00BB"; // »
+
+  }
+
+  .fi-us.-equity-sm::before {
+    content: "\00B9"; // ¹
+
+  }
+
+  .fi-international-equity-sm::before {
+    content: "\00B8"; // ¸
+
+  }
+
+  .fi-cash-sm::before {
+    content: "\00B6"; // ¶
+
+  }
+
+  .fi-fixed-income-sm::before {
+    content: "\00B7"; // ·
+
+  }
+
+  .fi-mutual-funds-sm::before {
+    content: "\0103"; // ă
+
+  }
+
+  .fi-american-depository-reciepts-sm::before {
+    content: "\0101"; // ā
+
+  }
+
+  .fi-precious-metals-sm::before {
+    content: "\0105"; // ą
+
+  }
+
+  .fi-warrants-and-rights-sm::before {
+    content: "\0107"; // ć
+
+  }
+
+  .fi-etfs-sm::before {
+    content: "\0109"; // ĉ
+
+  }
+
+  .fi-withdrawals-invert::before {
+    content: "\015B"; // ś
+
+  }
+
+  .fi-trades-invert::before {
+    content: "\0160"; // Š
+
+  }
+
+  .fi-interest-invert::before {
+    content: "\0161"; // š
+
+  }
+
+  .fi-fees-and-rebates-invert::before {
+    content: "\0164"; // Ť
+
+  }
+
+  .fi-fx-conversations-invert::before {
+    content: "\015E"; // Ş
+
+  }
+
+  .fi-deposits-invert::before {
+    content: "\015A"; // Ś
+
+  }
+
+  .fi-other-invert::before {
+    content: "\015C"; // Ŝ
+
+  }
+
+  .fi-corporate-action-invert::before {
+    content: "\0162"; // Ţ
+
+  }
+
+  .fi-dividends-invert::before {
+    content: "\015F"; // ş
+
+  }
+
+  .fi-trasfers-invert::before {
+    content: "\015D"; // ŝ
+
+  }
+
+  .fi-dividend-reinvestment-invert::before {
+    content: "\0163"; // ţ
+
+  }
+
+  .fi-platnium-member::before {
+    content: "\012D"; // ĭ
+
+  }
+
+  .fi-go-to-quote-browser::before {
+    content: "\0054"; // T
+
+  }
+
+  .fi-refresh::before {
+    content: "\0110"; // Đ
+
+  }
+
+  .fi-circle-left::before {
+    content: "\0055"; // U
+
+  }
+
+  .fi-circle-right::before {
+    content: "\0056"; // V
+
+  }
+
+  .fi-download-sm::before {
+    content: "\0079"; // y
+
+  }
+
+  .fi-download-lg::before {
+    content: "\0059"; // Y
+
+  }
+
+  .fi-upload-sm::before {
+    content: "\0077"; // w
+
+  }
+
+  .fi-upload-lg::before {
+    content: "\0057"; // W
+
+  }
+
+  .fi-checkmark-sm::before {
+    content: "\007A"; // z
+
+  }
+
+  .fi-checkmark-lg::before {
+    content: "\005A"; // Z
+
+  }
+
+  .fi-disgard---cancel-sm::before {
+    content: "\0078"; // x
+
+  }
+
+  .fi-cancel-lg::before {
+    content: "\0058"; // X
+
+  }
+
+  .fi-add-to-workspace::before {
+    content: "\0052"; // R
+
+  }
+
+  .fi-sort-z–a::before {
+    content: "\0028"; // (
+
+  }
+
+  .fi-sort-a–z::before {
+    content: "\0029"; // )
+
+  }
+
+  .fi-down-arrow::before {
+    content: "\007D"; // }
+
+  }
+
+  .fi-up-arrow::before {
+    content: "\007B"; // {
+
+  }
+
+  .fi-left-arrow::before {
+    content: "\005B"; // [
+
+  }
+
+  .fi-right-arrow::before {
+    content: "\015D"; // ]
+
+  }
+
+  .fi-down-point-sm::before {
+    content: "\00F8"; // ø
+
+  }
+
+  .fi-up-point-sm::before {
+    content: "\00D6"; // Ø
+
+  }
+
+  .fi-left-point-sm::before {
+    content: "\00D8"; // Ö
+
+  }
+
+  .fi-right-point-sm::before {
+    content: "\00F6"; // ö
+
+  }
+
+  .fi-down-point-lg::before {
+    content: "\024E"; // Ɏ
+
+  }
+
+  .fi-up-point-lg::before {
+    content: "\024F"; // ɏ
+
+  }
+
+  .fi-left-point-lg::before {
+    content: "\00FD"; // ý
+
+  }
+
+  .fi-right-point-lg::before {
+    content: "\00DD"; // Ý
+
+  }
+
+  .fi-chevron-down-sm::before {
+    content: "\00F2"; // ò
+
+  }
+
+  .fi-chevron-up-sm::before {
+    content: "\00F3"; // ó
+
+  }
+
+  .fi-chevron-left-sm::before {
+    content: "\00F4"; // ô
+
+  }
+
+  .fi-chevron-right-sm::before {
+    content: "\00F5"; // õ
+
+  }
+
+  .fi-chevron-down-im::before {
+    content: "\00D2"; // Ò
+
+  }
+
+  .fi-chevron-up-im::before {
+    content: "\00D3"; // Ó
+
+  }
+
+  .fi-chevron-left-im::before {
+    content: "\00D4"; // Ô
+
+  }
+
+  .fi-chevron-right-im::before {
+    content: "\00D5"; // Õ
+
+  }
+
+  .fi-chevron-down-md::before {
+    content: "\00F9"; // ù
+
+  }
+
+  .fi-chevron-up-md::before {
+    content: "\00FA"; // ú
+
+  }
+
+  .fi-chevron-left-md::before {
+    content: "\00FB"; // û
+
+  }
+
+  .fi-chevron-right-md::before {
+    content: "\00FC"; // ü
+
+  }
+
+  .fi-chevron-down-lg::before {
+    content: "\00D9"; // Ù
+
+  }
+
+  .fi-chevron-up-lg::before {
+    content: "\00DA"; // Ú
+
+  }
+
+  .fi-chevron-left-lg::before {
+    content: "\00DB"; // Û
+
+  }
+
+  .fi-chevron-right-lg::before {
+    content: "\00DC"; // Ü
+
+  }
+
+  .fi-help-articles-sm::before {
+    content: "\0144"; // ń
+
+  }
+
+  .fi-blog-sm::before {
+    content: "\0145"; // Ņ
+
+  }
+
+  .fi-videos-sm::before {
+    content: "\0146"; // ņ
+
+  }
+
+  .fi-forums-sm::before {
+    content: "\0017"; // Ň
+
+  }
+
+  .fi-faqs-sm-help-tool-tip-lg::before {
+    content: "\0148"; // ň
+
+  }
+
+  .fi-help-articles-sm::before {
+    content: "\0151"; // ő
+
+  }
+
+  .fi-blog-sm::before {
+    content: "\0152"; // Œ
+
+  }
+
+  .fi-videos-sm::before {
+    content: "\0153"; // œ
+
+  }
+
+  .fi-forums-sm::before {
+    content: "\0154"; // Ŕ
+
+  }
+
+  .fi-faqs-sm::before {
+    content: "\0155"; // ŕ
+
+  }
+
+  .fi-lg-profile::before {
+    content: "\0168"; // Ũ
+
+  }
+
+  .fi-caution-sm::before {
+    content: "\007C"; //
+
+  }
+
+  .fi-help-sm::before {
+    content: "/"; // /
+    /* The content value inside the image map is wrong. U+007E is not '/' */
+  }
+
+  .fi-help-solid-sm::before {
+    content: "\00F7"; // º
+
+  }
+
+  .fi-notice-sm::before {
+    content: "\005C"; // \
+
+  }
+
+  .fi-checkmark-sm::before {
+    content: "\00E2"; // .
+
+  }
+
+  .fi-checkmark-solid-sm::before {
+    content: "\0076"; // v
+
+  }
+
+  .fi-get-margin-power::before {
+    content: "\0139"; // Ĺ
+
+  }
+
+  .fi-caution-im::before {
+    content: "\0027"; // "
+
+  }
+
+  .fi-help-tool-tip-im::before {
+    content: "\002F"; // ?
+
+  }
+
+  .fi-notice-im::before {
+    content: "\005C"; // |
+
+  }
+
+  .fi-checkmark-im::before {
+    content: "\00F7"; // ÷
+
+  }
+
+  .fi-tool-tip-solid-im::before {
+    content: "\00A3"; // £
+
+  }
+
+  .fi-caution-md::before {
+    content: "\0021"; // !
+
+  }
+
+  .fi-help-tool-tip-md::before {
+    content: "\0024"; // $
+
+  }
+
+  .fi-notice-md::before {
+    content: "\0025"; // %
+
+  }
+
+  .fi-checkmark-md::before {
+    content: "\0023"; // #
+
+  }
+
+  .fi-tool-tip-md::before {
+    content: "\0112"; // Ē
+
+  }
+
+  .fi-caution-lg::before {
+    content: "\0113"; // ē
+
+  }
+
+  .fi-faqs-sm-help-tool-tip-lg::before {
+    content: "\0148"; // ň
+
+  }
+
+  .fi-tool-tip-lg::before {
+    content: "\0111"; // đ
+
+  }
+
+  .fi-add::before {
+    content: "\0135"; // ĵ
+
+  }
+
+  .fi-remove::before {
+    content: "\0137"; // ķ
+
+  }
+
+  .fi-clear::before {
+    content: "\0136"; // Ķ
+
+  }
+
+  .fi-warning::before {
+    content: "\00A4"; // ¤
+
+  }
+
+  .fi-twitter-solid-sm::before {
+    content: "\0123"; // ģ
+
+  }
+
+  .fi-facebook-solid-sm::before {
+    content: "\0124"; // Ĥ
+
+  }
+
+  .fi-linkedin-solid-sm::before {
+    content: "\0125"; // ĥ
+
+  }
+
+  .fi-email-solid-sm::before {
+    content: "\0126"; // Ħ
+
+  }
+
+  .fi-youtube-solid-sm::before {
+    content: "\012B"; // ī
+
+  }
+
+  .fi-twitter-solid-lg::before {
+    content: "\0127"; // ħ
+
+  }
+
+  .fi-facebook-solid-lg::before {
+    content: "\0128"; // Ĩ
+
+  }
+
+  .fi-linkedin-solid-lg::before {
+    content: "\0129"; // ĩ
+
+  }
+
+  .fi-youtube-solid-lg::before {
+    content: "\012A"; // Ī
+
+  }
+
+  .fi-the-exchange::before {
+    content: "\014D"; // ō
+
+  }
+
+  .fi-twitter::before {
+    content: "\014E"; // Ŏ
+
+  }
+
+  .fi-research::before {
+    content: "\014F"; // ŏ
+
+  }
+
+  .fi-youtube::before {
+    content: "\0150"; // Ő
+
+  }
+
+  .fi-account-management::before {
+    content: "\0030"; // 0
+
+  }
+
+  .fi-investment-returns::before {
+    content: "\0031"; // 1
+
+  }
+
+  .fi-balances-and-positions::before {
+    content: "\0032"; // 2
+
+  }
+
+  .fi-funding::before {
+    content: "\002D"; // -
+
+  }
+
+  .fi-trading::before {
+    content: "\002B"; // +
+
+  }
+
+  .fi-account-management::before {
+    content: "\0030"; // 0
+
+  }
+
+  .fi-investment-returns::before {
+    content: "\0031"; // 1
+
+  }
+
+  .fi-balances-and-positions::before {
+    content: "\0032"; // 2
+
+  }
+
+  .fi-funding::before {
+    content: "\002D"; // -
+
+  }
+
+  .fi-trading::before {
+    content: "\002B"; // +
+
+  }
+
+  .fi-buy-and-sell::before {
+    content: "\013B"; // Ļ
+
+  }
+
+  .fi-failed::before {
+    content: "\016F"; // ů
+
+  }
+
+  .fi-success::before {
+    content: "\0170"; // Ű
+
+  }
+
+  .fi-ebook::before {
+    content: "\0033"; // 3
+    color: #009EF0;
+  }
+
+  .fi-video-tutorials::before {
+    content: "\0034"; // 4
+    color: #009EF0;
+  }
+
+  .fi-quick-tips::before {
+    content: "\0035"; // 5
+    color: #009EF0;
+  }
+
+  .fi-fx-and-cfd::before {
+    content: "\0036"; // 6
+    color: #009EF0;
+  }
+
+  .fi-fx-daily-ticker::before {
+    content: "\0037"; // 7
+    color: #009EF0;
+  }
+
+  .fi-daily-ticker::before {
+    content: "\0038"; // 8
+    color: #009EF0;
+  }
+
+  .fi-mutual-fund-centre::before {
+    content: "\0039"; // 9
+    color: #009EF0;
+  }
+
+  .fi-market-intelligence::before {
+    content: "\003C"; // <
+    color: #009EF0;
+  }
+
+  .fi-intraday-trader::before {
+    content: "\003E"; // >
+    color: #009EF0;
+  }
+
+  .fi-bond-101::before {
+    content: "\002C"; // ,
+    color: #009EF0;
+  }
+
+  .fi-coming-soon::before {
+    content: "\00D1"; // Ñ
+    color: #009EF0;
+  }
+
+  .fi-questrade-advantage::before {
+    content: "\00F0"; // Ċ
+    color: #009EF0;
+  }
+
+  .fi-new-to-iq::before {
+    content: "\024D"; // ɍ
+    color: #009EF0;
+  }
+
+  .fi-exchange::before {
+    content: "\024C"; // Ɍ
+    color: #009EF0;
+  }
+
+  .fi-capital-gains::before {
+    content: "\00DE"; // Þ
+    color: #009EF0;
+  }
+
+  .fi-learning-from-the-experts::before {
+    content: "\00DF"; // ß
+    color: #009EF0;
+  }
+
+  .fi-free-to-transfer-account::before {
+    content: "\00FE"; // þ
+    color: #009EF0;
+  }
+
+  .fi-refer-a-friend::before {
+    content: "\00FF"; // ÿ
+    color: #009EF0;
+  }
+
+  .fi-account-type::before {
+    content: "\00A1"; // ¡
+    color: #009EF0;
+  }
+
+  .fi-account-opening-tool::before {
+    content: "\00A2"; // ¢
+    color: #009EF0;
+  }
+
+  .fi-managing-your-accounts::before {
+    content: "\00A6"; // ¦
+    color: #009EF0;
+  }
+
+  .fi-managing-your-funds::before {
+    content: "\00A7"; // §
+    color: #009EF0;
+  }
+
+  .fi-trading-tips::before {
+    content: "\00A8"; // ¨
+    color: #009EF0;
+  }
+
+  .fi-mutual-fund-maximizer::before {
+    content: "\00A9"; // ©
+    color: #009EF0;
+  }
+
+  .fi-product-and-services::before {
+    content: "\00AA"; // ª
+    color: #009EF0;
+  }
+
+  .fi-glossary-and-faqs::before {
+    content: "\00AB"; // «
+    color: #009EF0;
+  }
+
+  .fi-reward-programs::before {
+    content: "\00AC"; // ¬
+    color: #009EF0;
+  }
+
+  .fi-profile-selected::before {
+    content: "\013C"; // ļ
+
+  }
+
+  .fi-financial-selected::before {
+    content: "\013D"; // Ľ
+
+  }
+
+  .fi-confirmation-selected::before {
+    content: "\013E"; // ľ
+
+  }
+
+  .fi-employement-affiliations-selected::before {
+    content: "\013F"; // Ŀ
+
+  }
+
+  .fi-profile::before {
+    content: "\0156"; // Ŗ
+
+  }
+
+  .fi-financial::before {
+    content: "\0157"; // ŗ
+
+  }
+
+  .fi-confirmation::before {
+    content: "\158"; // Ř
+
+  }
+
+  .fi-employement-affiliations::before {
+    content: "\159"; // ř
+
+  }
+
+/** DEPRECRATE **/
+
+//Icons
+$plus-icon-offset: "\52";
+$arrow-icon-offset: "\FD";
+$check-icon-okay: "\23";
+
+.icons {
+    @extend %myQT-font-family;
+    @extend .font-colors;
+    @extend .font-sizes;
+    @extend .font-weight;
+}
+
+.plus-icon {
+    @extend .icons;
+    &::before {
+        content: $plus-icon-offset;
+    }
+}
+
+.arrow-left-icon {
+    @extend .icons;
+    &::before {
+        content: $arrow-icon-offset;
+    }
+}
+
+.arrow-right-icon {
+    @extend .icons;
+    @include transform-rotate(180deg);
+    &::before {
+        content: $arrow-icon-offset;
+    }
+}
+
+.arrow-top-icon {
+    @extend .icons;
+    &::before {
+        content: $arrow-icon-offset;
+        @include transform-rotate(90deg);
+    }
+}
+
+.arrow-bottom-icon {
+    @extend .icons;
+    &::before {
+        content: $arrow-icon-offset;
+        @include transform-rotate(-90deg);
+    }
+}
+
+.check-icon-okay {
+    @extend .icons;
+    &::before {
+        content: $check-icon-okay;
+    }
+}
+
+.fi {
+    @extend .icons;
+}
+
+.fi-info {
+    &:before {
+        content: "\7c";
+    }
+    &.green {
+        color: $sd-color;
+    }
+    &.purple {
+        color: $piq-color;
+    }
+    &.grey {
+        color: #bdc1c4;
+    }
+    &.blue {
+        color:#2ba6dc;
+    }
+}
+
+.fi-info-big {
+    &:before {
+        content: "\25";
+    }
+    &.green {
+        color: $sd-color !important;
+    }
+    &.purple {
+        color: $piq-color !important;
+    }
+    &.grey {
+        color: #bdc1c4;
+    }
+    &.blue {
+        color: $blue-icon-color;
+    }
+}
+
+.fi-discard:before {
+	content: "\58";
+    color: #bcc1c4;
+}
+
+.fi-profile-icon {
+    &:before {
+        content: "\178";
+    }
+}
+.fi-employment-icon {
+    &:before {
+        content: "\179";
+    }
+}
+.fi-financial-icon {
+    &:before {
+        content: "\17A";
+    }
+}
+.fi-citizenship-icon {
+    &:before {
+        content: "\17B";
+    }
+}
+
+.fi-right-point-small {
+    &:before {
+        content: "\F6";
+    }
+}

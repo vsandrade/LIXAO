@@ -1,0 +1,161 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius:    $radius;
+    -ms-border-radius:     $radius;
+    border-radius:         $radius;
+}
+
+ @mixin drop-shadow ($inset, $h-shadow, $v-shadow, $color, $opacity) {
+    box-shadow: $inset $h-shadow $v-shadow $color;
+    -webkit-box-shadow: $inset $h-shadow $v-shadow $color;
+    -moz-box-shadow: $inset $h-shadow $v-shadow $color;
+    -ms-opacity: $opacity;
+    opacity: $opacity;
+}
+
+ @mixin transform-rotate($degree) {
+    -webkit-transform: rotate($degree);
+    -moz-transform: rotate($degree);
+    -ms-transform: rotate($degree);
+    -o-transform: rotate($degree);
+    transform: rotate($degree);
+ }
+
+ @mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $spread $color;
+    -moz-box-shadow:inset $top $left $blur $spread $color;
+    box-shadow:inset $top $left $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+@mixin triangle($color, $size, $orientation) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $size;
+  border-color: $color transparent transparent transparent;
+  @if $orientation == 'top' {
+    border-width-bottom: 0
+  }
+}
+
+@mixin border($width, $style, $color, $radius: null) {
+  border-width: $width;
+  border-style: $style;
+  border-color: $color;
+  @if $radius != null {
+    @include border-radius($radius);
+  }
+}
+
+@mixin mat-progress-bar-fill-color($color) {
+  ::ng-deep .mat-progress-bar-fill::after {
+      background-color: $color !important;
+  }
+}
+
+@mixin mat-progress-bar-style($height, $bufferColor, $fillColor) {
+  ::ng-deep .mat-progress-bar {
+    height: $height;
+  }
+  ::ng-deep .mat-progress-bar-buffer {
+      background-color: $bufferColor !important;
+  }
+  @include mat-progress-bar-fill-color($fillColor);
+}
+
+@mixin media($selectedBreakpoints...) {
+  @for $i from 1 through length($selectedBreakpoints) {
+    $breakpoint: nth($selectedBreakpoints, $i);
+    @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+      $selected: map-get($map: $breakpoints, $key: $breakpoint);
+      $start: map-get($map: $selected, $key: start);
+      $end: map-get($map: $selected, $key: end);
+
+      @if $start != null and $end == null {
+        @media (min-width: #{$start}) {
+          @content;
+        }
+      } @else if $start == null and $end != null {
+        @media (max-width: #{$end}) {
+          @content;
+        }
+      } @else {
+        @media (min-width: #{$start}) and (max-width: #{$end}) {
+          @content;
+        }
+      }
+    } @else {
+      @warn "Unfortunately, no value could be retrieved from '#{$breakpoint}'. "
+      + "Please make sure it is defined in '$breakpoints' map.";
+    }
+  }
+}
+
+@function get-breakpoint-value($breakpoint, $index) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $selected: map-get($map: $breakpoints, $key: $breakpoint);
+    @if $index == start {
+      $start: map-get($map: $selected, $key: start);
+      @return $start;
+    } @else {
+      $end: map-get($map: $selected, $key: end);
+      @return $end;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from '#{$breakpoint}'. "
+    + "Please make sure it is defined in '$breakpoints' map.";
+  }
+}
+
+@mixin setup-scale($attribute, $alias, $start, $seed, $limit, $unit) {
+  $count: $start;
+  @while $count <= $limit {
+    .#{$alias}#{$count} {
+      #{$attribute}: #{$count + $unit};
+    }
+    $count: $count + $seed
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: "alpha(opacity=#{$opacity-ie})";
+}
+
+@mixin width-calc($value) {
+  width: -webkit-calc($value);
+  width: -moz-calc($value);
+  width: calc($value);
+}
+
+@mixin transition($property, $timing-function, $duration) {
+  transition: $property $timing-function $duration;
+  -webkit-transition: $property $timing-function $duration;
+  -moz-transition: $property $timing-function $duration;
+  -ms-transition: $property $timing-function $duration;
+  -o-transition: $property $timing-function $duration;
+}
+
+@mixin compat($property, $value) {
+  #{$property}: $value;
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+}
+
+@mixin compatValue($property, $value) {
+  #{$property}: $value;
+  #{$property}: -webkit-#{$value};
+  #{$property}: -moz-#{$value};
+  #{$property}: -ms-#{$value};
+  #{$property}: -o-#{$value};
+}
