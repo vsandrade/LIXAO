@@ -77,43 +77,32 @@
   <div class="offerBanner_toggleBar" (click)="toggle(banner)" [ngStyle]="{ 'background-color' : isOpen ? '#f6f7f9' : '#e8eef2' }" data-qt="btnQuestMortgageHideOffer" attr.data-qt-toggle="{{ isOpen ? 'hide' : 'show' }}">
     <span>{{ isOpen ? 'Hide' : 'Show' }}</span><i [@rotatedState]="isOpen ? 'default' : 'rotated'" [ngClass]="isOpen ? 'fi fi-chevron-right down' : 'fi fi-chevron-right up'"></i>
   </div>
-  <div #banner [@smoothCollapse]="isOpen ? 'final' : 'initial'" class="offerBanner_open-close-container">
-    <div class="bannerContainer">
-
-      <div class="box1">
+  <div #banner [@smoothCollapse]="isOpen ? 'final' : 'initial'" class="offerBanner_container">
+    <div class="offerBanner_container_bannerContainer">
+      <div class="offerBanner_container_bannerContainer_box1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340" width="100px">
-          <defs>
-            <style>
-              .a { fill: #def2e2; }
-              .b { fill: #fff;}
-              .c { fill: #00a82f;}
-              .d { fill: #cbd5e2;}
-              .e { fill: #5e708a;}
-            </style>
-          </defs>
-          <circle class="a" cx="170" cy="170" r="170"/>
-          <polygon class="b" points="297.15 195.66 283.22 171.54 282.62 130.89 288.86 131.52 231.32 67.69 183.78 66.47 175.52 66.56 170.71 62.17 166.3 66.67 110.12 67.33 51.75 127.58 59 129 58.65 150.34 58 260.55 283.39 259.46 283.62 196.36 297.15 195.66"/>
+          <circle class="svg_circle_a" cx="170" cy="170" r="170" style="fill: #def2e2;"/>
+          <polygon class="svg_polygon_b" points="297.15 195.66 283.22 171.54 282.62 130.89 288.86 131.52 231.32 67.69 183.78 66.47 175.52 66.56 170.71 62.17 166.3 66.67 110.12 67.33 51.75 127.58 59 129 58.65 150.34 58 260.55 283.39 259.46 283.62 196.36 297.15 195.66" style="fill: #fff;"/>
           <g>
-            <path class="c" d="M143.11,238H118.26a4.75,4.75,0,0,0-4.75,4.75V290.5h34.35V242.76A4.75,4.75,0,0,0,143.11,238Zm-19.83,28.27a2,2,0,1,1-4.07,0v-4.54a2,2,0,1,1,4.07,0Z" transform="translate(-30 -30)"/>
+            <path class="svg_path_c" d="M143.11,238H118.26a4.75,4.75,0,0,0-4.75,4.75V290.5h34.35V242.76A4.75,4.75,0,0,0,143.11,238Zm-19.83,28.27a2,2,0,1,1-4.07,0v-4.54a2,2,0,1,1,4.07,0Z" transform="translate(-30 -30)" style="fill: #00a82f;"/>
             <g>
-              <path class="d" d="M288.94,170.15H272.22a4.84,4.84,0,0,0-4.83,4.84V191.7a4.84,4.84,0,0,0,4.83,4.84h16.72a4.84,4.84,0,0,0,4.83-4.84V175A4.84,4.84,0,0,0,288.94,170.15Z" transform="translate(-30 -30)"/>
-              <path class="d" d="M188.4,157.46l0,23.5h28.14l0-23.5a14.08,14.08,0,0,0-28.15,0Z" transform="translate(-30 -30)"/>
-              <path class="d" d="M147.41,204.47a16.79,16.79,0,0,0-33.57,0v2.41h33.57Z" transform="translate(-30 -30)"/>
-              <path class="d" d="M234,276.12l0-23.51a14.08,14.08,0,0,0-28.15,0l0,23.51Z" transform="translate(-30 -30)"/>
-              <path class="d" d="M283.56,252.61a14.08,14.08,0,0,0-28.15,0l0,23.51h28.15Z" transform="translate(-30 -30)"/>
-              <path class="e" d="M332.05,225.55,316,203V163.23h5.39a2.64,2.64,0,0,0,2.63-2.45c0-.07.05-.12.05-.19h0v0c0-.08,0-.14,0-.21a2.65,2.65,0,0,0-.68-1.68c-16.95-18.11-38.82-41.87-58.51-63.55,0,0,0,0-.05,0a3.27,3.27,0,0,0-.48-.35,3,3,0,0,0-.37-.25,2.51,2.51,0,0,0-.49-.12,2.28,2.28,0,0,0-.52-.1l-.08,0H208.14l-4.93-5.38c-.07-.07-.17-.1-.24-.16l-1.64-1.79L200,88.32a2.66,2.66,0,0,0-.78.54l-4.93,5.38-55.71.07h-.06a3.33,3.33,0,0,0-.53.11,3.72,3.72,0,0,0-.48.11,2.08,2.08,0,0,0-.34.24,2.61,2.61,0,0,0-.51.36s0,0-.05,0L113.5,120.43,78.11,158.68a2.68,2.68,0,0,0,.15,3.79,2.64,2.64,0,0,0,1.81.71h5.55V179.8L74.23,192a2.68,2.68,0,0,0,.13,3.79,2.65,2.65,0,0,0,1.83.73h.09a2.7,2.7,0,0,0,1.87-.85l7.47-8v103a2.68,2.68,0,0,0,2.68,2.68h.23c81.69-.45,220.91-1.16,224.51-1a2.6,2.6,0,0,0,.79,0,2.68,2.68,0,0,0,2.2-2.63V229.79h13.83a2.69,2.69,0,0,0,2.19-4.24ZM310.66,287h-7l-25.51.09c-21.1.08-49.23.21-77.36.35l-25.27.13.14-57.75h135ZM91,181.91l13.08-14,26.75-29.66L157.6,168l12.79,13.82-.25,105.8-79,.42H91Zm60.23-29L149.55,151l1.66-1.82Zm94.87-9.3v57.64H175.76l.06-13.57,7.39,8a2.76,2.76,0,0,0,3.79.14,2.65,2.65,0,0,0,.86-1.86,2.69,2.69,0,0,0-.71-1.93l-11.3-12.21v-.12l-19.27-21.19V143.39l44.75-48.56,13.53,14.68Zm5.36,57.64V163.14l59.22.08v38Zm-150.33-38-1,1.12L91,174.06V163.18Z" transform="translate(-30 -30)"/>
+              <path class="svg_path_d" d="M288.94,170.15H272.22a4.84,4.84,0,0,0-4.83,4.84V191.7a4.84,4.84,0,0,0,4.83,4.84h16.72a4.84,4.84,0,0,0,4.83-4.84V175A4.84,4.84,0,0,0,288.94,170.15Z" transform="translate(-30 -30)" style="fill: #cbd5e2;"/>
+              <path class="svg_path_d" d="M188.4,157.46l0,23.5h28.14l0-23.5a14.08,14.08,0,0,0-28.15,0Z" transform="translate(-30 -30)" style="fill: #cbd5e2;"/>
+              <path class="svg_path_d" d="M147.41,204.47a16.79,16.79,0,0,0-33.57,0v2.41h33.57Z" transform="translate(-30 -30)" style="fill: #cbd5e2;"/>
+              <path class="svg_path_d" d="M234,276.12l0-23.51a14.08,14.08,0,0,0-28.15,0l0,23.51Z" transform="translate(-30 -30)" style="fill: #cbd5e2;"/>
+              <path class="svg_path_d" d="M283.56,252.61a14.08,14.08,0,0,0-28.15,0l0,23.51h28.15Z" transform="translate(-30 -30)" style="fill: #cbd5e2;"/>
+              <path class="svg_path_e" d="M332.05,225.55,316,203V163.23h5.39a2.64,2.64,0,0,0,2.63-2.45c0-.07.05-.12.05-.19h0v0c0-.08,0-.14,0-.21a2.65,2.65,0,0,0-.68-1.68c-16.95-18.11-38.82-41.87-58.51-63.55,0,0,0,0-.05,0a3.27,3.27,0,0,0-.48-.35,3,3,0,0,0-.37-.25,2.51,2.51,0,0,0-.49-.12,2.28,2.28,0,0,0-.52-.1l-.08,0H208.14l-4.93-5.38c-.07-.07-.17-.1-.24-.16l-1.64-1.79L200,88.32a2.66,2.66,0,0,0-.78.54l-4.93,5.38-55.71.07h-.06a3.33,3.33,0,0,0-.53.11,3.72,3.72,0,0,0-.48.11,2.08,2.08,0,0,0-.34.24,2.61,2.61,0,0,0-.51.36s0,0-.05,0L113.5,120.43,78.11,158.68a2.68,2.68,0,0,0,.15,3.79,2.64,2.64,0,0,0,1.81.71h5.55V179.8L74.23,192a2.68,2.68,0,0,0,.13,3.79,2.65,2.65,0,0,0,1.83.73h.09a2.7,2.7,0,0,0,1.87-.85l7.47-8v103a2.68,2.68,0,0,0,2.68,2.68h.23c81.69-.45,220.91-1.16,224.51-1a2.6,2.6,0,0,0,.79,0,2.68,2.68,0,0,0,2.2-2.63V229.79h13.83a2.69,2.69,0,0,0,2.19-4.24ZM310.66,287h-7l-25.51.09c-21.1.08-49.23.21-77.36.35l-25.27.13.14-57.75h135ZM91,181.91l13.08-14,26.75-29.66L157.6,168l12.79,13.82-.25,105.8-79,.42H91Zm60.23-29L149.55,151l1.66-1.82Zm94.87-9.3v57.64H175.76l.06-13.57,7.39,8a2.76,2.76,0,0,0,3.79.14,2.65,2.65,0,0,0,.86-1.86,2.69,2.69,0,0,0-.71-1.93l-11.3-12.21v-.12l-19.27-21.19V143.39l44.75-48.56,13.53,14.68Zm5.36,57.64V163.14l59.22.08v38Zm-150.33-38-1,1.12L91,174.06V163.18Z" transform="translate(-30 -30)" style="fill: #5e708a;"/>
             </g>
           </g>
         </svg>
       </div>
-      <div class="box2">
+      <div class="offerBanner_container_bannerContainer_box2">
         <h1 [innerHTML]="ActiveBanner[statusBanner.status].title"></h1>
         <span>{{ActiveBanner[statusBanner.status].description}}</span>
       </div>
-      <div class="box3">
-        <button class="btnBanner" (click)="callMortgageInfo()" data-qt="btnQuestMortgageInterested">{{ActiveBanner[statusBanner.status].btnLabel}}</button>
+      <div class="offerBanner_container_bannerContainer_box3">
+        <button class="offerBanner_container_bannerContainer_box3_btnBanner" (click)="callMortgageInfo()" data-qt="btnQuestMortgageInterested">{{ActiveBanner[statusBanner.status].btnLabel}}</button>
       </div>
-
     </div>
     <div class="offerBanner_footerLabel">
       QuestMortgage is a mortgage service provided by CTC.

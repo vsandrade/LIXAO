@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation, HostListener } from '@angular/core';
 import {
   trigger,
   state,
@@ -21,7 +21,7 @@ import { AppService } from './app.service';
         height: '0',
         overflow: 'hidden',
         opacity: 0,
-        visibility: 'hidden'
+        visibility: 'hidden',
       })),
       state('final', style({
         height: '*',
@@ -40,6 +40,7 @@ import { AppService } from './app.service';
 export class AppComponent implements OnInit, OnDestroy  {
 
   public isOpen = true;
+
   public statusBanner: FooterBannerConfiguration;
 
   private unsubscriber = new Subject();
@@ -57,14 +58,24 @@ export class AppComponent implements OnInit, OnDestroy  {
     }
   };
 
+  @HostListener('window:scroll', ['$event'])
+  scrollHandler(event: any) {
+    if (window.scrollY > 100) {
+      this.isOpen = false;
+      sessionStorage.setItem('footerBannerOpen', `${this.isOpen}`);
+    }
+  }
+
   constructor(public service: AppService) { }
 
   ngOnInit(): void {
+    this.isOpen = sessionStorage.getItem('footerBannerOpen') === null ? true : JSON.parse(sessionStorage.getItem('footerBannerOpen'));
     this.afterLaunch();
   }
 
   toggle() {
     this.isOpen = !this.isOpen;
+    sessionStorage.setItem('footerBannerOpen', `${this.isOpen}`);
   }
 
   afterLaunch(): void {

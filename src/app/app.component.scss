@@ -5,7 +5,7 @@
   bottom: 0;
   width: 100%;
 
-  &_open-close-container {
+  &_container {
     color: #000000;
     background-color: #f6f7f9;
     font-weight: bold;
@@ -15,14 +15,14 @@
     justify-content: center;
     align-items: center;
 
-    .bannerContainer {
+    &_bannerContainer {
       margin-top: 10px;
 
       @include media(small-mobile, mobile) {
         padding: 0px 16px;
       }
 
-      .box1 {
+      &_box1 {
         width: 100px;
         height: 100px;
         margin-right: 24px;
@@ -41,7 +41,7 @@
         }
       }
 
-      .box2 {
+      &_box2 {
         max-width: 576px;
         float: left;
         height: 100px;
@@ -100,7 +100,7 @@
         }
       }
 
-      .box3 {
+      &_box3 {
         display: flex;
         align-items: center;
         float: left;
@@ -112,7 +112,7 @@
           margin: 16px 0px;
         }
 
-        .btnBanner {
+        &_btnBanner {
           width: 141px;
           height: 40px;
           border-radius: 3px;
@@ -131,7 +131,11 @@
           text-transform: uppercase;
           cursor: pointer;
 
-
+          &:active,
+          &:focus,
+          &:hover {
+            border: 0px;
+          }
         }
       }
 
