@@ -22,6 +22,7 @@ import { AppService } from './app.service';
       state('initial', style({
         height: '0',
         overflow: 'hidden',
+        opacity: 0.0,
         visibility: 'hidden',
       })),
       state('final', style({
@@ -30,11 +31,16 @@ import { AppService } from './app.service';
       })),
       transition('final=>initial', [
         query('.offerBanner_container_bannerContainer', [
-          animate('100ms ease-out', style({ opacity: 1 }))
+          animate('200ms ease-out', style({ overflow: 'hidden', visibility: 'hidden' }))
         ]),
         animate('300ms ease-out')
       ]),
-      transition('initial=>final', animate('300ms ease-in'))
+      transition('initial=>final', [
+        query('.offerBanner_container_bannerContainer', [
+          animate('200ms ease-in', style({ overflow: 'hidden', visibility: 'hidden' }))
+        ]),
+        animate('300ms ease-in')
+      ])
     ]),
     trigger('rotatedState', [
       state('default', style({ transform: 'rotate(0deg)'})),
