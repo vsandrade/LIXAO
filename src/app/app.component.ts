@@ -22,7 +22,6 @@ import { AppService } from './app.service';
       state('initial', style({
         height: '0',
         overflow: 'hidden',
-        opacity: 0.0,
         visibility: 'hidden',
       })),
       state('final', style({
@@ -31,15 +30,15 @@ import { AppService } from './app.service';
       })),
       transition('final=>initial', [
         query('.offerBanner_container_bannerContainer', [
-          animate('200ms ease-out', style({ overflow: 'hidden', visibility: 'hidden' }))
+          animate('200ms ease-out', style({ overflow: 'hidden', opacity: 0.0, visibility: 'hidden' }))
         ]),
         animate('300ms ease-out')
       ]),
       transition('initial=>final', [
+        animate('500ms ease-in'),
         query('.offerBanner_container_bannerContainer', [
-          animate('200ms ease-in', style({ overflow: 'hidden', visibility: 'hidden' }))
+          animate('300ms ease-in', style({ overflow: 'hidden', opacity: 1, visibility: 'hidden' }))
         ]),
-        animate('300ms ease-in')
       ])
     ]),
     trigger('rotatedState', [
@@ -47,8 +46,7 @@ import { AppService } from './app.service';
       state('rotated', style({ transform: 'rotate(0deg)'})),
       transition('default <=> rotated', animate('100ms'))
     ])
-  ],
-  encapsulation: ViewEncapsulation.None,
+  ]
 })
 export class AppComponent implements OnInit, OnDestroy  {
 
@@ -57,19 +55,6 @@ export class AppComponent implements OnInit, OnDestroy  {
   public statusBanner: FooterBannerConfiguration;
 
   private unsubscriber = new Subject();
-
-  public ActiveBanner = {
-    preLaunching: {
-      title: 'A better mortgage offering...is coming soon',
-      description: 'To be the first to know when it launches, tell us about your mortgage needs.',
-      btnLabel: `I'M INTERESTED`
-    },
-    launched: {
-      title: 'Introducing <label>QuestMortgage</label>',
-      description: 'An easier, online way to get a mortgage with a BetterRate so you can keep more of your money.',
-      btnLabel: 'LEARN MORE'
-    }
-  };
 
   @HostListener('window:scroll', ['$event'])
   scrollHandler(event: any) {

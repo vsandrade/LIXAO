@@ -75,7 +75,7 @@
           text-decoration: none solid rgb(57, 67, 82);
           margin: 4px 0px;
 
-          label { color: #3da542; }
+          .questLabel { color: #3da542; }
 
           @include media(small-mobile, mobile, tablet) {
             font-size: 20px;
@@ -84,7 +84,7 @@
           }
         }
 
-        span {
+        .description {
           max-width: 570px;
           font-family: $open-sans;
           font-size: 16px;

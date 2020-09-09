@@ -97,11 +97,20 @@
         </svg>
       </div>
       <div class="offerBanner_container_bannerContainer_box2">
-        <h1 [innerHTML]="ActiveBanner[statusBanner.status].title"></h1>
-        <span>{{ActiveBanner[statusBanner.status].description}}</span>
+        <ng-container *ngIf="statusBanner.status === 'preLaunching'">
+          <h1>A better mortgage offering...is coming soon</h1>
+          <span class="description">To be the first to know when it launches, tell us about your mortgage needs.</span>
+        </ng-container>
+        <ng-container *ngIf="statusBanner.status === 'launched'">
+          <h1>Introducing <span class="questLabel">QuestMortgage</span></h1>
+          <span class="description">An easier, online way to get a mortgage with a BetterRate so you can keep more of your money.</span>
+        </ng-container>
       </div>
+
       <div class="offerBanner_container_bannerContainer_box3">
-        <button class="offerBanner_container_bannerContainer_box3_btnBanner" (click)="callMortgageInfo()" data-qt="btnQuestMortgageInterested">{{ActiveBanner[statusBanner.status].btnLabel}}</button>
+        <button class="offerBanner_container_bannerContainer_box3_btnBanner" (click)="callMortgageInfo()" data-qt="btnQuestMortgageInterested">
+          {{ statusBanner.status === 'preLaunching' ? "I'M INTERESTED" : "LEARN MORE" }}
+        </button>
       </div>
     </div>
     <div class="offerBanner_footerLabel">
