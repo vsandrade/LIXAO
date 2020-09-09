@@ -5,6 +5,8 @@ import {
   style,
   animate,
   transition,
+  query,
+  stagger,
 } from '@angular/animations';
 import { FooterBannerType, FooterBannerConfiguration } from './FooterBannerConfiguration';
 import { takeUntil } from 'rxjs/operators';
@@ -20,18 +22,23 @@ import { AppService } from './app.service';
       state('initial', style({
         height: '0',
         overflow: 'hidden',
-        opacity: 0,
         visibility: 'hidden',
       })),
       state('final', style({
         height: '*',
         overflow: 'hidden'
       })),
-      transition('initial<=>final', animate('400ms'))
+      transition('final=>initial', [
+        query('.offerBanner_container_bannerContainer', [
+          animate('100ms ease-out', style({ opacity: 1 }))
+        ]),
+        animate('300ms ease-out')
+      ]),
+      transition('initial=>final', animate('300ms ease-in'))
     ]),
     trigger('rotatedState', [
-      state('default', style({ transform: 'rotate(90deg)'})),
-      state('rotated', style({ transform: 'rotate(-90deg)'})),
+      state('default', style({ transform: 'rotate(0deg)'})),
+      state('rotated', style({ transform: 'rotate(0deg)'})),
       transition('default <=> rotated', animate('100ms'))
     ])
   ],

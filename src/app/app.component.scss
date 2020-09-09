@@ -134,7 +134,8 @@
           &:active,
           &:focus,
           &:hover {
-            border: 0px;
+            background-color: #2b732f;
+            outline: none;
           }
         }
       }

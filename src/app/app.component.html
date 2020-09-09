@@ -75,7 +75,7 @@
 <section class="offerBanner" *ngIf="statusBanner.status != 'inactive'">
 
   <div class="offerBanner_toggleBar" (click)="toggle(banner)" [ngStyle]="{ 'background-color' : isOpen ? '#f6f7f9' : '#e8eef2' }" data-qt="btnQuestMortgageHideOffer" attr.data-qt-toggle="{{ isOpen ? 'hide' : 'show' }}">
-    <span>{{ isOpen ? 'Hide' : 'Show' }}</span><i [@rotatedState]="isOpen ? 'default' : 'rotated'" [ngClass]="isOpen ? 'fi fi-chevron-right down' : 'fi fi-chevron-right up'"></i>
+    <span>{{ isOpen ? 'Hide' : 'Show' }}</span><i [@rotatedState]="isOpen ? 'default' : 'rotated'" [ngClass]="isOpen ? 'fi fi-chevron-down down' : 'fi fi-chevron-up up'"></i>
   </div>
   <div #banner [@smoothCollapse]="isOpen ? 'final' : 'initial'" class="offerBanner_container">
     <div class="offerBanner_container_bannerContainer">
