@@ -7,6 +7,7 @@ import {
   transition,
   query,
   stagger,
+  group,
 } from '@angular/animations';
 import { FooterBannerType, FooterBannerConfiguration } from './FooterBannerConfiguration';
 import { takeUntil } from 'rxjs/operators';
@@ -29,15 +30,20 @@ import { AppService } from './app.service';
         overflow: 'hidden'
       })),
       transition('final=>initial', [
-        query('.offerBanner_container_bannerContainer', [
-          animate('200ms ease-out', style({ overflow: 'hidden', opacity: 0.0, visibility: 'hidden' }))
-        ]),
-        animate('300ms ease-out')
-      ]),
+        group([
+          query('.offerBanner_footerLabel', [
+            animate('30ms ease-in', style({ overflow: 'hidden', opacity: 0 }))
+          ]),
+          query('.offerBanner_container_bannerContainer', [
+            animate('300ms ease-in', style({ height: '0', overflow: 'hidden', opacity: 0, visibility: 'hidden' }))
+          ]),
+          animate('300ms ease-in'),
+        ]
+        )]),
       transition('initial=>final', [
-        animate('500ms ease-in'),
+        animate('300ms ease-out'),
         query('.offerBanner_container_bannerContainer', [
-          animate('300ms ease-in', style({ overflow: 'hidden', opacity: 1, visibility: 'hidden' }))
+          animate('300s ease-out', style({ height: '*', overflow: 'hidden' }))
         ]),
       ])
     ]),
