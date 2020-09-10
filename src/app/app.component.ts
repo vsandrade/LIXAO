@@ -32,7 +32,7 @@ import { AppService } from './app.service';
       transition('final=>initial', [
         group([
           query('.offerBanner_footerLabel', [
-            animate('30ms ease-in', style({ overflow: 'hidden', opacity: 0 }))
+            animate('300ms ease-in', style({ overflow: 'hidden', opacity: 0 }))
           ]),
           query('.offerBanner_container_bannerContainer', [
             animate('300ms ease-in', style({ height: '0', overflow: 'hidden', opacity: 0, visibility: 'hidden' }))
