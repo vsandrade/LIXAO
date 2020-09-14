@@ -35,7 +35,7 @@ import { AppService } from './app.service';
             animate('300ms ease-in', style({ overflow: 'hidden', opacity: 0 }))
           ]),
           query('.offerBanner_container_bannerContainer', [
-            animate('300ms ease-in', style({ height: '0', overflow: 'hidden', opacity: 0, visibility: 'hidden' }))
+            animate('300ms ease-in', style({ overflow: 'hidden', opacity: 0, visibility: 'hidden' }))
           ]),
           animate('300ms ease-in'),
         ]
@@ -43,7 +43,7 @@ import { AppService } from './app.service';
       transition('initial=>final', [
         animate('300ms ease-out'),
         query('.offerBanner_container_bannerContainer', [
-          animate('300s ease-out', style({ height: '*', overflow: 'hidden' }))
+          animate('300s ease-out', style({ overflow: 'hidden' }))
         ]),
       ])
     ]),
