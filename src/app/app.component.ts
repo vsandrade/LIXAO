@@ -9,7 +9,7 @@ import {
   stagger,
   group,
 } from '@angular/animations';
-import { FooterBannerType, FooterBannerConfiguration } from './FooterBannerConfiguration';
+import { FooterBannerType, WidgetConfiguration } from './WidgetConfiguration';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { AppService } from './app.service';
@@ -58,15 +58,20 @@ export class AppComponent implements OnInit, OnDestroy  {
 
   public isOpen = true;
 
-  public statusBanner: FooterBannerConfiguration;
+  public statusBanner: WidgetConfiguration;
 
   private unsubscriber = new Subject();
+  private MOBILE_MAX_SIZE = 600;
+  private lastScrollPosition = 0;
 
   @HostListener('window:scroll', ['$event'])
-  scrollHandler(event: any) {
+  scrollHandler() {
     if (window.scrollY > 100) {
       this.isOpen = false;
-      sessionStorage.setItem('footerBannerOpen', `${this.isOpen}`);
+    } else {
+      if (JSON.parse(sessionStorage.getItem('footerBannerOpen')) === true) {
+        this.isOpen = true;
+      }
     }
   }
 
@@ -87,19 +92,19 @@ export class AppComponent implements OnInit, OnDestroy  {
       .pipe(takeUntil(this.unsubscriber))
       .subscribe(
         (config) => {
-            this.statusBanner = config;
+          this.statusBanner = config;
         },
         (error) => {
-            console.error(error);
+          console.error(error);
         }
       );
   }
 
   callMortgageInfo(): void {
-    if (this.statusBanner.status === FooterBannerType.PreLaunching) {
-        window.open(this.statusBanner.preLaunchingUrl, '_blank');
+    if (this.statusBanner.bannerStatus === FooterBannerType.PreLaunching) {
+        window.open(this.statusBanner.bannerPreLaunchingUrl, '_blank');
     } else {
-        window.open(this.statusBanner.launchedUrl, '_blank');
+        window.open(this.statusBanner.bannerLaunchedUrl, '_blank');
     }
   }
 
