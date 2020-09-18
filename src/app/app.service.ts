@@ -10,13 +10,19 @@ import { tap } from 'rxjs/operators';
 })
 export class AppService {
 
+  private WidgetConfig: WidgetConfiguration;
+
   constructor(private http: HttpClient) { }
 
-  public getAccountApplicationFooterBannerConfiguration(): Observable<WidgetConfiguration> {
-    return this.http.get<WidgetConfiguration>(`http://localhost:3000/WidgetConfig`)
-    .pipe(
-      tap((x) => console.log(x))
-    );
+  public async widgetConfig(): Promise<WidgetConfiguration> {
+    if (this.WidgetConfig === undefined) {
+      await this.getAccountApplicationWidgetConfiguration().then((response) => this.WidgetConfig = response);
+    }
+    return this.WidgetConfig;
+  }
+
+  public async getAccountApplicationWidgetConfiguration(): Promise<WidgetConfiguration> {
+    return await this.http.get<WidgetConfiguration>(`http://localhost:3000/WidgetConfig`).toPromise();
   }
 
 }

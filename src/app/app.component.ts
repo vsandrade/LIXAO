@@ -66,12 +66,11 @@ export class AppComponent implements OnInit, OnDestroy  {
 
   @HostListener('window:scroll', ['$event'])
   scrollHandler() {
-    if (window.scrollY > 100) {
-      this.isOpen = false;
-    } else {
-      if (JSON.parse(sessionStorage.getItem('footerBannerOpen')) === true) {
-        this.isOpen = true;
-      }
+    if (window.screen.width < this.MOBILE_MAX_SIZE &&
+        JSON.parse(sessionStorage.getItem('footerBannerOpen')) === true) {
+      const scrollPosition = window.scrollY;
+      this.isOpen = scrollPosition < this.lastScrollPosition;
+      this.lastScrollPosition = scrollPosition;
     }
   }
 
@@ -88,16 +87,7 @@ export class AppComponent implements OnInit, OnDestroy  {
   }
 
   afterLaunch(): void {
-    this.service.getAccountApplicationFooterBannerConfiguration()
-      .pipe(takeUntil(this.unsubscriber))
-      .subscribe(
-        (config) => {
-          this.statusBanner = config;
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
+    this.service.widgetConfig().then((resp) => this.statusBanner = resp);
   }
 
   callMortgageInfo(): void {
